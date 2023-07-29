@@ -1,5 +1,4 @@
 # one-k-files
-# File Organizer
 
 The File Organizer is a Python script that helps you organize text files into sub-folders based on the first word in their file names. It accepts a folder path containing the text files and, optionally, enables logging to keep track of any issues encountered during the organization process.
 
@@ -17,12 +16,13 @@ The File Organizer is a Python script that helps you organize text files into su
 
 1. Clone the repository:
 
-git clone git@github.com:ManarAbdelkarim/one-k-files.git
+git clone ```git@github.com:ManarAbdelkarim/one-k-files.git```
+
 cd one-k-files
 
 2. Run the script with the folder path containing the text files:
 
-python main.py <folder_path>
+```python main.py <folder_path>```
 
 3. Optional: Enable logging with the `-l` or `--logging` flag:
 
