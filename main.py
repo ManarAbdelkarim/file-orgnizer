@@ -76,9 +76,7 @@ class FileOrganizer:
 
             except Exception as e:
                 # Log the actual error message from the caught exception
-                time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                err = f'[{time}] {file_name} [ERR]: {str(e)}\n'
-                logging.error(err)
+                logging.error(f"{file_name} [ERR]: {str(e)}")
 
         if language_folders:
             logging.info(
@@ -109,10 +107,6 @@ def main():
     folder_path = args.folder_path
     enable_logging = args.logging
 
-    if not os.path.exists(folder_path):
-        logging.error("The specified folder path does not exist.")
-        return
-
     if enable_logging:
         # Initialize the logging if enabled
         log_filename = ".file_organizer_log.log"  # Hidden error log file
@@ -121,6 +115,11 @@ def main():
                             level=logging.INFO,
                             format='%(asctime)s [%(levelname)s]: %(message)s',
                             datefmt='%Y-%m-%d %H:%M:%S')
+
+    if not os.path.exists(folder_path):
+        logging.error("The specified folder path does not exist.")
+        return
+
 
     organizer = FileOrganizer(folder_path)
     organizer.group_files_by_first_word()
