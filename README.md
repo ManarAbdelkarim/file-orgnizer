@@ -30,7 +30,7 @@ cd one-k-files
 
 ## Example
 
-Let's say you have a folder named `text_files` with the following files:
+Let's say you have a folder named `files` with the following files:
 
 - arabic-1.txt
 - arabic-2.txt
